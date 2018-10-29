@@ -15,7 +15,7 @@ const getEntities = (): Entity[] => {
 const populateDefaults = (): Promise<void> => {
     const config = sourcegraph.configuration.get()
     const entities = config.get(CONFIG_KEY)
-    if (entities === null) {
+    if (!entities) {
         return config.update(CONFIG_KEY, defaults)
     } else {
         return Promise.resolve()

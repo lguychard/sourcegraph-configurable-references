@@ -1,10 +1,14 @@
 {
-  "name": "sourcegraph-custom-references",
-  "version": "1.0.0",
-  "description": "Lets you configure reference finding for custom entities (HTTP routes, build tasks) using regular expressions",
+  "name": "sourcegraph-configurable-references",
+  "version": "1.0.1",
+  "description": "Lets you configure reference finding using regular expressions",
   "main": "dist/extension.js",
-  "title": "Custom References",
+  "title": "Configurable References",
   "publisher": "lguychard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lguychard/sourcegraph-configurable-references"
+  },
   "activationEvents": [
     "*"
   ],
@@ -14,7 +18,7 @@
     "prettier": "prettier '**/*.{js?(on),ts}' --write --list-different",
     "semantic-release": "semantic-release",
     "sourcegraph:prepublish": "parcel build --out-file dist/extension.js src/extension.ts",
-    "publish": "src extensions publish -extension-id lguychard/custom-references"
+    "publish": "src extensions publish -extension-id lguychard/configurable-references"
   },
   "commitlint": {
     "extends": [

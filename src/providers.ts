@@ -29,7 +29,7 @@ async function findEntityOccurences({
     }
     const searchStrings = entityAtPosition.entity[type]
         .filter(p => p.search)
-        .map(({ search }) => interpolate(search, entityAtPosition.groups))
+        .map(({ search }) => interpolate(search!, entityAtPosition.groups))
     const searchRequests = searchStrings.map(s => findStringReferences(s, repo as string))
     const results = await Promise.all(searchRequests)
     return [].concat(...(results as any)) as any
