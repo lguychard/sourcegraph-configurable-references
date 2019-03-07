@@ -23,7 +23,7 @@ const populateDefaults = (): Promise<void> => {
 }
 
 export function activate(): void {
-    let providersRegistered = true
+    let providersRegistered = !!false
     sourcegraph.workspace.onDidOpenTextDocument.subscribe(async () => {
         if (!providersRegistered) {
             await populateDefaults()
