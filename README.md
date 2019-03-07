@@ -38,5 +38,3 @@ With this configuration, hovering HTTP route definitions will trigger a tooltip 
 ## Defaults
 
 If your Sourcegraph configuration does not have a `"customReferences"` field, the extension will create it, and include by default the configuration for string literal references
-
-test
